@@ -33,6 +33,20 @@ body{
     left: 0;
     padding: 0 40px;
 }
+.form-box.Login .animation{
+    transform: translateX(0%);
+    transform: .7s;
+    opacity: 1;
+    transition-delay: calc(.1s * var(--D));
+}
+.container.active .form-box.Login .animation{
+    transform: translateX(-120%);
+    opacity: 0;
+}
+.container.active .form-box.Login .animation{
+    transform: translateX(-120%);
+    opacity: 0;
+}
 .form-box.Register{
     display: none;
     right: 0;
