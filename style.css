@@ -43,10 +43,7 @@ body{
     transform: translateX(-120%);
     opacity: 0;
 }
-.container.active .form-box.Login .animation{
-    transform: translateX(-120%);
-    opacity: 0;
-}
+
 .form-box.Register{
     display: none;
     right: 0;
@@ -154,9 +151,22 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    right: 0;
+    
+}
+.info-content.Login{
+  right: 0;
     text-align: right;
     padding: 0 40px 60px 150px;
+}
+.info-content.Login .animation{
+    transform:translateX(0);
+    transition: 0.7s ease;
+    transition-delay: calc(.1s * var(--D));
+}
+.container.active .info-content.Login .animation{
+    transform: translateX(120%);
+    opacity: 0;
+    transition-delay: .2s;
 }
 
 .info-content.Register{
