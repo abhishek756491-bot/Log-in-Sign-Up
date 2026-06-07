@@ -37,17 +37,28 @@ body{
     transform: translateX(0%);
     transform: .7s;
     opacity: 1;
-    transition-delay: calc(.1s * var(--D));
+    /* transition-delay: calc(.1s * var(--s)); */
 }
 .container.active .form-box.Login .animation{
     transform: translateX(-120%);
     opacity: 0;
+    transition-delay: calc(.1s * var(--D));
 }
 
 .form-box.Register{
-    display: none;
     right: 0;
     padding: 0 60px;
+}
+.form-box.Register .animation{
+    transform: translateX(120%);
+    transform: .7s ease;
+    opacity: 0;
+    
+}
+.container.active .form-box.Register .animation{
+    transform: translateX(0%);
+    opacity: 1;
+    transition-delay: calc(.1s * var(--li));
 }
 .form-box h2{
     font-size: 32px;
@@ -65,7 +76,7 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
     font-weight: 600;
     border-bottom: 2px solid #FFF;
@@ -166,15 +177,27 @@ body{
 .container.active .info-content.Login .animation{
     transform: translateX(120%);
     opacity: 0;
-    transition-delay: .2s;
-}
+}  
 
 .info-content.Register{
-  right: 0;
-  text-align: right;
-  padding: 0 40px 60px 150px;
-  display: none;
+  left: 0;
+  text-align: left;
+  padding: 0 150px 60px 60px;
+  pointer-events: none;
 }
+.info-content.Register .animation{
+    transform:translateX(-130%);
+    transition: 0.7s ease;
+    /* filter: blur(10px); */
+   transition-delay: calc(.1s * var(--s));
+}
+.container.active .info-content.Register .animation{
+    transform: translateX(0%);
+    /* opacity: 0; */
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--li));
+}  
+
 .info-content h2{
     text-transform: 16px;
 }
